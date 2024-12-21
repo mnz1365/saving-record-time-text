@@ -1,18 +1,21 @@
 from datetime import date, datetime
 
+def saveDateText():
+    today = date.today()
+    currentTime = datetime.now()
 
-today = date.today()
-currentTime = datetime.now()
-
-myday = today.strftime("%B %d, %Y")
-mytime = currentTime.strftime("%H:%M:%S")
+    myday = today.strftime("%B %d, %Y")
+    mytime = currentTime.strftime("%H:%M:%S")
 
 
-f = open("myrecord.txt", "a" )
+    f = open("myrecord.txt", "a" )
 
-f.write(myday + " " + mytime + "\n")
-f.close()
+    f.write(myday + " " + mytime + "\n")
+    f.close()
 
-# f = open("myrecord.txt", "r")
+    # f = open("myrecord.txt", "r")
 
-# print(f.read())
+    # print(f.read())    
+
+
+saveDateText()
